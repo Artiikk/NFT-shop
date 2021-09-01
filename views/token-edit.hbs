@@ -1,0 +1,40 @@
+<h1>{{title}}</h1>
+
+{{#if error}}
+  <p class="notify alert">{{error}}</p>
+{{/if}}
+
+<form action="/tokens/edit" method="POST">
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="title">NFT Title</label>
+      <input id="title" name="title" type="text" class="validate" value="{{token.title}}">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="price">NFT price</label>
+      <input id="price" name="price" type="text" class="validate" value="{{token.price}}">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="url">Image URL</label>
+      <input id="url" name="img" type="text" class="validate" value="{{token.img}}">
+    </div>
+  </div>
+
+  <input type="hidden" id="id" name="id" value="{{token._id}}">
+  <input type="hidden" name="_csrf" value={{ csrf }}>
+
+  <button type="submit" class="btn btn-primary">Edit NFT</button>
+</form>
+
+<form action="/tokens/remove" method="POST">
+  <input type="hidden" name="id" value="{{ token._id }}">
+  <input type="hidden" name="_csrf" value={{ csrf }}>
+  
+  <button type="submit" class="btn red">Delete NFT</button> 
+</form>

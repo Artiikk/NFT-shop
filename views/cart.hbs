@@ -1,0 +1,44 @@
+<h1>Cart</h1>
+
+<div id="cart">
+  {{#if tokens.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody class="">
+
+      {{#each tokens}}
+        <tr>
+          <td>{{title}}</td>
+          <td>{{count}}</td>
+          <td>
+            <button
+              class="btn btn-small js-remove"
+              data-id="{{_id}}"
+              data-csrf="{{@root.csrf}}"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+
+  <p><b>Price:</b> <span class="price">{{price}}</span></p>
+
+  <form action="/orders" method="POST">
+    <input type="hidden" name="_csrf" value={{ csrf }}>
+    <button type="submit" class="btn">Make order</button>
+  </form>
+  {{else}}
+  <p>Cart is empty</p>
+  {{/if}}
+</div>

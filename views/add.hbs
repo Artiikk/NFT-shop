@@ -1,0 +1,32 @@
+<h1>Add new NFT</h1>
+
+{{#if error}}
+  <p class="notify alert">{{error}}</p>
+{{/if}}
+
+<form action="/add" method="POST" novalidate>
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="title">NFT Title</label>
+      <input id="title" name="title" type="text" class="validate" value="{{data.title}}">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="price">NFT price</label>
+      <input id="price" name="price" type="text" class="validate" value="{{data.price}}">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <label for="url">image URL</label>
+      <input id="url" name="img" type="text" class="validate" value="{{data.img}}">
+    </div>
+  </div>
+
+  <input type="hidden" name="_csrf" value={{ csrf }}>
+
+  <button class="btn btn-primary">Add NFT</button>
+</form>

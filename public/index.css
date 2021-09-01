@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+}
+
+.nav-wrapper {
+  padding: 0 32px;
+}
+
+.nav-wrapper a {
+  color: #000;
+}
+
+nav {
+  background: transparent;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.notify {
+  padding: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.alert {
+  background: rgba(255, 0, 0, 0.3);
+  color: red;
+}
+
+.info {
+  background: rgb(6, 204, 253);
+  color: #fff;
+}
+
+.success {
+  background: rgb(27, 216, 144);
+  color: #fff;
+}
+
+.custom-card {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: rgb(4 17 29 / 25%) 0px 0px 12px 2px;
+}
+
+.custom-card-image {
+  padding: 10px;
+  height: 60%;
+}
+
+.card .card-image img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-card-content {
+  height: 25%
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.card-action.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+}
+
+.df {
+  display: flex;
+}
+
+.df-ac {
+  display: flex;
+  align-items: center;
+}
+
+.m10-auto {
+  margin: 10px auto;
+}
+
+.tabs {
+  margin-top: 5px;
+}
+
+.tabs .indicator {
+  background-color: #eee;
+}
+
+.tabs .tab a,
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #000;
+}
+
+.tabs .tab .active {
+  background: #fff !important;
+}
+
+.auth {
+  margin-top: 60px;
+}
+
+.avatar {
+  max-width: 300px;
+  height: auto;
+}
