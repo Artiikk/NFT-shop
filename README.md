@@ -1,5 +1,5 @@
 # NFT-shop
-NFT shop with customization features
+NFT shop with various customization features
 
 Shop is build using [Node.js](https://nodejs.org/uk/), [Express](https://expressjs.com/ru/) and [Handlebars](https://handlebarsjs.com/).
 
